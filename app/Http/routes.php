@@ -22,3 +22,13 @@ $app->get('/results/lawyers', function () use ($app) {
     	]
     ];
 });
+
+$app->get('/control/last', function () use ($app) {
+    
+    # Get last request from control table
+	$last = App\Models\Control::OrderBy("id", "DESC")->limit(1)->first();
+
+	# Return last request
+	return $last->request;
+
+});
