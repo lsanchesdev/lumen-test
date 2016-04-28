@@ -17,12 +17,20 @@ $app->get('/', function () use ($app) {
     return $app->version();
 });
 
+$app->get('/locations/countries', function () use ($app) {
+    return [];
+});
+
+$app->get('/locations/states', function () use ($app) {
+    return [];
+});
+
+$app->get('/locations/cities', function () use ($app) {
+    return [];
+});
+
 $app->get('/results/lawyers', function () use ($app) {
-    return [
-    	0 => [
-    		"name" => "ABC"
-    	]
-    ];
+    return [];
 });
 
 $app->get('/control/last', function () use ($app) {
