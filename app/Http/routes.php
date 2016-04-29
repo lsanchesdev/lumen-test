@@ -17,6 +17,10 @@ $app->get('/', function () use ($app) {
     return $app->version();
 });
 
+$app->get('/php/info', function () use ($app) {
+    phpinfo();
+});
+
 $app->get('/locations/countries', function () use ($app) {
     return [];
 });
