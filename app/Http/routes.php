@@ -18,7 +18,7 @@ $app->get('/', function () use ($app) {
 });
 
 $app->get('/php/info', function () use ($app) {
-    phpinfo();
+    phpinfo(); 
 });
 
 $app->get('/locations/countries', function () use ($app) {
